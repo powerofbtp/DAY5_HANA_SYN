@@ -1,0 +1,33 @@
+_schema-version: "2.1"
+ID: TESTHANA1_1
+version: 0.0.1
+modules:
+- name: db
+  type: hdb
+  path: db
+  requires:
+  - name: HANA_SYN #hdi_db ##+++
+    properties:
+      TARGET_CONTAINER: ~{hdi-container-name}
+  - name: UPS_ABAP_REMOTE #
+
+resources:
+- name: HANA_SYN #hdi_db
+  type: com.sap.xs.hdi-container
+  parameters:
+    service: hana
+    config:
+      schema: HANA_SYN
+      makeUniqueName: false
+  properties:
+    hdi-container-name: ${service-name}
+
+
+##+++
+- name: UPS_ABAP_REMOTE
+  type: org.cloudfoundry.existing-service
+  parameters:
+    service-name: UPS_ABAP_REMOTE
+    config:
+      makeuniquename: false    
+##+++ 

@@ -1,0 +1,8 @@
+COLUMN TABLE "com.partha.testhana1.TB::EMPLOYEES" (
+  "PersonID" INTEGER,
+  "FirstName" NVARCHAR(255),
+  "LastName" NVARCHAR(255),
+  "Address" NVARCHAR(255),
+  "Phone" NVARCHAR(15),
+  PRIMARY KEY ("PersonID")
+)

@@ -1,0 +1,26 @@
+{
+    "role": {
+        "name": "com.partha.testhana1::ZPARHANAHDI_access_g#",
+        // "object_privileges": [
+
+        //     {
+        //         "name": "ZPARHANAHDITEST.TB::EMPLOYEES",
+        //         "type": "TABLE",
+        //         "privileges": [
+        //             "SELECT"
+        //         ]
+        //     }   
+        // ]
+        
+        "schema_privileges": [
+            {
+                "privileges_with_grant_option": [
+                    "SELECT",
+                    "SELECT CDS METADATA",
+                    "UPDATE",
+                    "EXECUTE"
+                ]
+            }
+        ]           
+    }
+}      
